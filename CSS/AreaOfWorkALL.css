@@ -1,0 +1,76 @@
+/* All summary-view styles have been removed from here */
+
+.detailed-view {
+    font-family: "Poppins", Arial, sans-serif;
+    color: #222;
+    line-height: 1.7;
+    padding: 60px 8%;
+    background: linear-gradient(180deg, #f3f6fc 0%, #ffffff 100%);
+    overflow-x: hidden;
+}
+
+.detailed-view .accordion-header {
+    position: relative;
+    display: block;
+    background: linear-gradient(135deg, #021036, #033a99);
+    color: #fff;
+    font-weight: 600;
+    padding: 16px 22px;
+    margin: 14px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 19px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.35s ease;
+}
+
+.detailed-view .accordion-header:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #032366, #0044cc);
+}
+
+.detailed-view .accordion-header i.fa-angle-down {
+    transition: transform 0.35s ease;
+    float: right;
+}
+
+.detailed-view .accordion-toggle {
+    display: none;
+}
+
+.detailed-view .accordion-content {
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 25px 22px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border-left: 5px solid #f1c40f;
+    animation: fadeIn 0.4s ease;
+}
+
+.detailed-view .accordion-toggle:checked+.accordion-header+.accordion-content {
+    display: block;
+}
+
+.detailed-view .accordion-toggle:checked+.accordion-header i.fa-angle-down {
+    transform: rotate(180deg);
+}
+
+.detailed-view .accordion-content h3 {
+    font-size: 22px;
+    color: #021036;
+    margin-top: 20px;
+    border-bottom: 3px solid #f1c40f;
+    padding-bottom: 8px;
+}
+
+.detailed-view .accordion-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 18px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}

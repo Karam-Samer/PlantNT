@@ -1,0 +1,141 @@
+#home-projects-titles {
+    background: #f4f7fb;
+    padding: 40px 20px;
+    border-radius: 15px;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+#home-projects-titles h2 {
+    font-size: 30px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.projects-titles-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.projects-titles-list li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #2c3e50;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.projects-titles-list li a i {
+    color: #3498db;
+    font-size: 18px;
+}
+
+.projects-titles-list li a:hover {
+    background: #3498db;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.projects-titles-list li a:hover i {
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .projects-titles-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects-titles-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Styles moved from AreaOfWorkALL.css */
+.summary-view {
+    max-width: 800px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.summary-view .toggle {
+    cursor: pointer;
+    background: #021036;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.summary-view .toggle:hover {
+    background: #032b70;
+}
+
+.summary-view .arrow {
+    transition: transform 0.3s ease;
+}
+
+.summary-view .content {
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: -10px;
+    padding: 25px 22px;
+    padding-top: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    border-left: 5px solid #f1c40f;
+    line-height: 1.6;
+    animation: fadeIn 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.summary-view .expertise-area.active .content {
+    display: block;
+}
+
+.summary-view .expertise-area.active .arrow {
+    transform: rotate(180deg);
+}
+
+.summary-view .know-more-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
