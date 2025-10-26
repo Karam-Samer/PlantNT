@@ -1,0 +1,143 @@
+/* Mashro3/CSS/RTL.css - ملف الأنماط الخاص باللغة العربية (RTL) */
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* تعديلات شريط التنقل العلوي */
+.top-bar {
+    flex-direction: row-reverse;
+    /* عكس ترتيب أيقونات التواصل واللغة */
+}
+
+.top-bar .social a {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+/* تعديلات الهيدر والقائمة الرئيسية */
+.main-header nav ul {
+    direction: rtl;
+    text-align: right;
+    padding: 0;
+}
+
+.main-header nav ul li a::after {
+    left: auto;
+    right: 0;
+}
+
+.menu-toggle {
+    right: auto;
+    left: 20px;
+}
+
+.main-header nav ul.show {
+    transform: translateX(100%);
+}
+
+body.menu-open .main-header nav ul.show {
+    transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .main-header nav ul {
+        transform: translateX(100%);
+        right: 0;
+        left: auto;
+        align-items: flex-end;
+    }
+}
+
+
+/* تعديلات الفوتر (التذييل) */
+.end-footer {
+    flex-direction: row-reverse;
+}
+
+.footer-col.address {
+    text-align: right;
+}
+
+.footer-col ul li a:hover {
+    padding-left: 0;
+    padding-right: 4px;
+}
+
+.mail-form input[type="email"] {
+    text-align: right;
+}
+
+
+/* تعديلات خاصة بصفحة نطاق العمل (Area of Work) */
+.detailed-view .accordion-header i.fa-angle-down {
+    float: left;
+    /* عكس اتجاه سهم القائمة */
+}
+
+.detailed-view .accordion-content h3 {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+.detailed-view .accordion-content {
+    border-left: none;
+    border-right: 5px solid var(--accent-color);
+}
+
+
+/* تعديلات صفحة المشاريع (Projects) */
+.projects-page h1 {
+    /* تم إلغاء التنسيق اليدوي لـ h1 في هذا الملف لصالح .section-heading في Global.css */
+    /* التنسيق التالي تم إبقاؤه لـ RTL (العربية) */
+    border-left: none;
+    border-right: 6px solid var(--accent);
+    padding-left: 0;
+    padding-right: 12px;
+    text-align: right;
+}
+
+.projects-page ul {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.projects-page ul li {
+    text-align: right;
+}
+
+.projects-page i {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.land-mgmt-visual {
+    flex-direction: row-reverse;
+}
+
+/* تعديلات صفحة الاتصال (Contact) */
+.contact-information i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    text-align: right;
+}
+
+.contact-form label {
+    text-align: right;
+}
+
+/* تعديلات صفحة الرئيسية (Home) */
+.projects-titles-list li a {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.projects-titles-list li a i {
+    margin-right: 0;
+    margin-left: 10px;
+}

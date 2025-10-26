@@ -1,0 +1,62 @@
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 25px;
+    border-left: 4px solid #f1c40f;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.service-card.show {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #021036;
+}
+
+.service-card p,
+.service-card ul {
+    color: #555;
+}
+
+.service-card ul {
+    list-style-position: inside;
+    padding-left: 5px;
+    margin-top: 10px;
+}
+
+.service-card ul li {
+    margin-bottom: 8px;
+}

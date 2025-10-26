@@ -1,0 +1,159 @@
+:root {
+    --main-color: #021036;
+    --accent-color: #f1c40f;
+    --text-color: #222;
+    --bg-light: #f9f9f9;
+    --font-main: "Poppins", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+/* التعديل لضمان توسيط H1 في الصفحات الداخلية (مثل الخدمات) */
+main {
+    text-align: center; 
+}
+
+.btn,
+.know-more-btn,
+.see-more-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--accent-color);
+    color: var(--main-color);
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+.know-more-btn:hover,
+.see-more-btn:hover {
+    background: #d4ac0d;
+    transform: translateY(-2px);
+}
+
+/* All Keyframes are now centralized here */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    width: 45px;
+    height: 45px;
+    background: var(--accent-color);
+    color: var(--main-color);
+    text-align: center;
+    line-height: 45px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    background: #d4ac0d;
+    transform: translateY(-3px);
+}
+
+.know-more-container,
+.see-more-container,
+.know-more-wrapper {
+    margin-top: 30px;
+}
+
+/* --- New Section Title Style for H1 and H2 --- */
+.section-heading {
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: auto;  مع inline-flex لا يعمل, تم تصحيحه في العنصر الأب (main) */
+    text-align: center; 
+}
